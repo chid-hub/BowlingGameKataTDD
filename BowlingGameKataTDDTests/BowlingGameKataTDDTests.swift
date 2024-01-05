@@ -22,4 +22,11 @@ final class BowlingGameKataTDDTests: XCTestCase {
          game.roll(pins: 5)
          XCTAssertEqual(game.score(), 5)
      }
+    
+    func testRollingOneSpare() {
+        let game = BowlingGameModel()
+        game.roll(pins: 5)
+        game.roll(pins: 5)  // Spare
+        XCTAssertEqual(game.score(), 10)
+    }
 }
