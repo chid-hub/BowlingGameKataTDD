@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StrikeFrameModel {
+class StrikeFrameModel: Frame {
     
     let rolls: [Int]
     let startingRoll: Int

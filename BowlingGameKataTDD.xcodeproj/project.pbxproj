@@ -19,6 +19,7 @@
 		E65943602B48149600ED90E4 /* OpenFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659435F2B48149600ED90E4 /* OpenFrameModel.swift */; };
 		E65943622B4814E600ED90E4 /* StrikeFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943612B4814E600ED90E4 /* StrikeFrameModel.swift */; };
 		E65943642B481D2300ED90E4 /* SpareFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943632B481D2300ED90E4 /* SpareFrameModel.swift */; };
+		E65943662B482A6600ED90E4 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943652B482A6600ED90E4 /* Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E659435F2B48149600ED90E4 /* OpenFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFrameModel.swift; sourceTree = "<group>"; };
 		E65943612B4814E600ED90E4 /* StrikeFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeFrameModel.swift; sourceTree = "<group>"; };
 		E65943632B481D2300ED90E4 /* SpareFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareFrameModel.swift; sourceTree = "<group>"; };
+		E65943652B482A6600ED90E4 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				E659435F2B48149600ED90E4 /* OpenFrameModel.swift */,
 				E65943612B4814E600ED90E4 /* StrikeFrameModel.swift */,
 				E65943632B481D2300ED90E4 /* SpareFrameModel.swift */,
+				E65943652B482A6600ED90E4 /* Frame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65943662B482A6600ED90E4 /* Frame.swift in Sources */,
 				E659432B2B47F94D00ED90E4 /* BowlingGameViewController.swift in Sources */,
 				E659435E2B47FD9800ED90E4 /* BowlingGameViewModel.swift in Sources */,
 				E65943272B47F94D00ED90E4 /* AppDelegate.swift in Sources */,

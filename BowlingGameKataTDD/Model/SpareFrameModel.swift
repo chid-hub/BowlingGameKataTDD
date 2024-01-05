@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SpareFrameModel {
+class SpareFrameModel: Frame {
     
     let rolls: [Int]
     let startingRoll: Int

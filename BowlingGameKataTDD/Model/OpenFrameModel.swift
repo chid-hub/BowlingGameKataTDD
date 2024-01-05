@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OpenFrameModel {
+class OpenFrameModel: Frame {
     
    let rolls: [Int]
    let startingRoll: Int
