@@ -14,6 +14,8 @@
 		E65943302B47F94D00ED90E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E659432F2B47F94D00ED90E4 /* Assets.xcassets */; };
 		E65943332B47F94D00ED90E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65943312B47F94D00ED90E4 /* LaunchScreen.storyboard */; };
 		E659433E2B47F94D00ED90E4 /* BowlingGameKataTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659433D2B47F94D00ED90E4 /* BowlingGameKataTDDTests.swift */; };
+		E659435C2B47FD6D00ED90E4 /* BowlingGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659435B2B47FD6D00ED90E4 /* BowlingGameModel.swift */; };
+		E659435E2B47FD9800ED90E4 /* BowlingGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659435D2B47FD9800ED90E4 /* BowlingGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		E65943342B47F94D00ED90E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E65943392B47F94D00ED90E4 /* BowlingGameKataTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowlingGameKataTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E659433D2B47F94D00ED90E4 /* BowlingGameKataTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameKataTDDTests.swift; sourceTree = "<group>"; };
+		E659435B2B47FD6D00ED90E4 /* BowlingGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameModel.swift; sourceTree = "<group>"; };
+		E659435D2B47FD9800ED90E4 /* BowlingGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		E65943592B47F9B900ED90E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E659435B2B47FD6D00ED90E4 /* BowlingGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 		E659435A2B47F9C000ED90E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E659435D2B47FD9800ED90E4 /* BowlingGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,7 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E659432B2B47F94D00ED90E4 /* ViewController.swift in Sources */,
+				E659435E2B47FD9800ED90E4 /* BowlingGameViewModel.swift in Sources */,
 				E65943272B47F94D00ED90E4 /* AppDelegate.swift in Sources */,
+				E659435C2B47FD6D00ED90E4 /* BowlingGameModel.swift in Sources */,
 				E65943292B47F94D00ED90E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
