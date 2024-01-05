@@ -25,7 +25,7 @@ class BowlingGameModel {
         var frameIndex = 0
         frames = []
         
-        for _ in 0..<10 {
+        for _ in 0..<AppConstants.maxFrames {
             guard frameIndex < rolls.count else { break} // Stop processing frames if there are not enough rolls
             if isStrike(frameIndex) {
                 frames.append(StrikeFrameModel(rolls: rolls, staringIndex: frameIndex))
@@ -44,11 +44,11 @@ class BowlingGameModel {
     
     private func isSpare(_ frameIndex: Int) -> Bool {
         guard frameIndex + 1 < rolls.count else { return  false} // Stop processing frames if there are not enough rolls
-        return rolls[frameIndex] + rolls[frameIndex + 1] == 10
+        return rolls[frameIndex] + rolls[frameIndex + 1] == AppConstants.pinsPerFrame
     }
     
     private func isStrike(_ frameIndex: Int) -> Bool {
-        return rolls[frameIndex] == 10
+        return rolls[frameIndex] == AppConstants.pinsPerFrame
     }
     
     func resetGame() {

@@ -19,7 +19,7 @@ class SpareFrameModel: Frame {
     
      func score() -> Int {
          guard startingRoll + 2 < rolls.count else { return 0 }
-         return 10 + rolls[startingRoll + 2]
+         return AppConstants.spareScore + firstBonusBall()
      }
 
     func frameSize() -> Int {

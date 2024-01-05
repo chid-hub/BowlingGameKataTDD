@@ -20,6 +20,9 @@
 		E65943622B4814E600ED90E4 /* StrikeFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943612B4814E600ED90E4 /* StrikeFrameModel.swift */; };
 		E65943642B481D2300ED90E4 /* SpareFrameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943632B481D2300ED90E4 /* SpareFrameModel.swift */; };
 		E65943662B482A6600ED90E4 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65943652B482A6600ED90E4 /* Frame.swift */; };
+		E6A3618C2B483AA100296CBE /* FrameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A3618A2B483AA100296CBE /* FrameCell.xib */; };
+		E6A3618D2B483AA100296CBE /* FrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3618B2B483AA100296CBE /* FrameCell.swift */; };
+		E6A3618F2B483B3500296CBE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3618E2B483B3500296CBE /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		E65943612B4814E600ED90E4 /* StrikeFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeFrameModel.swift; sourceTree = "<group>"; };
 		E65943632B481D2300ED90E4 /* SpareFrameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareFrameModel.swift; sourceTree = "<group>"; };
 		E65943652B482A6600ED90E4 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		E6A3618A2B483AA100296CBE /* FrameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameCell.xib; sourceTree = "<group>"; };
+		E6A3618B2B483AA100296CBE /* FrameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCell.swift; sourceTree = "<group>"; };
+		E6A3618E2B483B3500296CBE /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 			children = (
 				E65943262B47F94D00ED90E4 /* AppDelegate.swift */,
 				E65943282B47F94D00ED90E4 /* SceneDelegate.swift */,
+				E6A3618E2B483B3500296CBE /* AppConstants.swift */,
 				E659432F2B47F94D00ED90E4 /* Assets.xcassets */,
 			);
 			path = App;
@@ -122,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				E659432A2B47F94D00ED90E4 /* BowlingGameViewController.swift */,
+				E6A3618B2B483AA100296CBE /* FrameCell.swift */,
+				E6A3618A2B483AA100296CBE /* FrameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65943332B47F94D00ED90E4 /* LaunchScreen.storyboard in Resources */,
+				E6A3618C2B483AA100296CBE /* FrameCell.xib in Resources */,
 				E65943302B47F94D00ED90E4 /* Assets.xcassets in Resources */,
 				E659432E2B47F94D00ED90E4 /* Main.storyboard in Resources */,
 			);
@@ -257,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65943662B482A6600ED90E4 /* Frame.swift in Sources */,
+				E6A3618D2B483AA100296CBE /* FrameCell.swift in Sources */,
 				E659432B2B47F94D00ED90E4 /* BowlingGameViewController.swift in Sources */,
+				E6A3618F2B483B3500296CBE /* AppConstants.swift in Sources */,
 				E659435E2B47FD9800ED90E4 /* BowlingGameViewModel.swift in Sources */,
 				E65943272B47F94D00ED90E4 /* AppDelegate.swift in Sources */,
 				E659435C2B47FD6D00ED90E4 /* BowlingGameModel.swift in Sources */,

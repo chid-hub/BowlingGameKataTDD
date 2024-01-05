@@ -19,7 +19,7 @@ class StrikeFrameModel: Frame {
     
     func score() -> Int {
         guard startingRoll + 2 < rolls.count else { return 0 } // Stop processing frames if there are not enough rolls
-        return 10 + rolls[startingRoll + 1] + rolls[startingRoll + 2]
+        return AppConstants.strikeScore + firstBonusBall() + secondBonusBall()
     }
     func frameSize() -> Int {
         return 1
