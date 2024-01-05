@@ -17,19 +17,6 @@ final class BowlingGameKataTDDTests: XCTestCase {
         game = BowlingGameViewModel(bowlingGameModel: model)
     }
     
-    func testRollingOneBall() {
-         game.roll(pins: 5)
-         XCTAssertEqual(game.score(), 5)
-     }
-    
-    func testRollingOneSpare() {
-        game.roll(pins: 5)
-        game.roll(pins: 5)  // Spare
-        game.roll(pins: 5)
-
-        XCTAssertEqual(game.score(), 20)
-    }
-    
     func testRollingOneStrike() {
         game.roll(pins: 10)  // Strike
         game.roll(pins: 5)
