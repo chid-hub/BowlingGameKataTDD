@@ -9,7 +9,7 @@ import Foundation
 
 // Protocol
 protocol BowlingGameViewModelProtocol {
-    func roll(_ pins: Int)
+    func roll(pins: Int)
     func score() -> Int
 }
 
@@ -21,7 +21,7 @@ class BowlingGameViewModel: BowlingGameViewModelProtocol {
          self.model = bowlingGameModel
      }
 
-     func roll(_ pins: Int) {
+     func roll(pins: Int) {
          model.roll(pins: pins)
      }
 
