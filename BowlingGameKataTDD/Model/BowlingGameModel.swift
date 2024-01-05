@@ -51,4 +51,12 @@ class BowlingGameModel {
         return rolls[frameIndex] == 10
     }
     
+    func resetGame() {
+        rolls = []
+        updateFrames()
+    }
+    
+    func getAllFrames() -> [Frame] {
+        return frames
+    }
 }

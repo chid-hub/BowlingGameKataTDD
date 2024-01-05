@@ -29,3 +29,15 @@ class BowlingGameViewModel: BowlingGameViewModelProtocol {
          return model.score()
      }
  }
+
+extension BowlingGameViewModel {
+    
+    func getAllFrames() -> [Frame] {
+        return model.getAllFrames()
+    }
+
+    func resetGame()  {
+        model.resetGame()
+    }
+
+}

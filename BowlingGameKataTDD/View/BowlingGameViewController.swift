@@ -23,11 +23,24 @@ class BowlingGameViewController: UIViewController {
     }
     
     @IBAction func numberOfPinKnokedButtonTapped(_ sender: UIButton) {
-       
+        let pinsKnockedDown = sender.tag
+        viewModel.roll(pins: pinsKnockedDown)
+        updateScore()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        viewModel.resetGame()
+        scoreLabel.text = "Total score: 0"
+        collectionView.reloadData()
+    }
+    private func updateScore() {
+        var scoreByFrames = ""
+        for frame in viewModel.getAllFrames() {
+            scoreByFrames += " \(frame.score()) "
+        }
         
+        scoreLabel.text = "Total score: \(viewModel.score())"
+        collectionView.reloadData()
     }
     
 }
