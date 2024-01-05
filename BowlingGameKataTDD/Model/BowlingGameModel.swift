@@ -24,13 +24,13 @@ class BowlingGameModel {
             guard frameIndex < rolls.count else { break} // Stop processing frames if there are not enough rolls
             
             if isStrike(frameIndex) {
-                total += 10 + strikeBonus(frameIndex)
+                total += StrikeFrameModel(rolls: rolls, staringIndex: frameIndex).score()
                 frameIndex += 1
             } else if isSpare(frameIndex) {
-                total += 10 + spareBonus(frameIndex)
+                total += SpareFrameModel(rolls: rolls, staringIndex: frameIndex).score()
                 frameIndex += 2
             } else {
-                total += openFrameScore(frameIndex)
+                total += OpenFrameModel(rolls: rolls, staringIndex: frameIndex).score()
                 frameIndex += 2
             }
             
@@ -43,24 +43,9 @@ class BowlingGameModel {
         guard frameIndex + 1 < rolls.count else { return  false} // Stop processing frames if there are not enough rolls
         return rolls[frameIndex] + rolls[frameIndex + 1] == 10
     }
-    
-    private func spareBonus(_ frameIndex: Int) -> Int {
-        guard frameIndex + 2 < rolls.count else { return 0 } // Stop processing frames if there are not enough rolls
-        
-        return rolls[frameIndex + 2]
-    }
-    
+
     private func isStrike(_ frameIndex: Int) -> Bool {
         return rolls[frameIndex] == 10
     }
     
-    private func strikeBonus(_ frameIndex: Int) -> Int {
-        guard frameIndex + 2 < rolls.count else { return 0 } // Stop processing frames if there are not enough rolls
-        return rolls[frameIndex + 1] + rolls[frameIndex + 2]
-    }
-    
-    private func openFrameScore(_ frameIndex: Int) -> Int {
-        guard frameIndex + 1 < rolls.count else { return  0} // Stop processing frames if there are not enough rolls
-        return rolls[frameIndex] + rolls[frameIndex + 1]
-    }
 }

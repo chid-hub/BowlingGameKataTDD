@@ -27,13 +27,17 @@ final class BowlingGameKataTDDTests: XCTestCase {
         let game = BowlingGameModel()
         game.roll(pins: 5)
         game.roll(pins: 5)  // Spare
-        XCTAssertEqual(game.score(), 10)
+        game.roll(pins: 5)
+
+        XCTAssertEqual(game.score(), 20)
     }
     
     func testRollingOneStrike() {
         let game = BowlingGameModel()
         game.roll(pins: 10)  // Strike
-        XCTAssertEqual(game.score(), 10)
+        game.roll(pins: 5)
+        game.roll(pins: 5)
+        XCTAssertEqual(game.score(), 20)
     }
     
     func testOpenFramesScore() {
