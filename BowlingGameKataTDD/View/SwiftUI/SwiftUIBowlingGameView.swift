@@ -59,3 +59,19 @@ struct PinButton: View {
             .cornerRadius(8)
     }
 }
+
+struct FrameView: View {
+    var viewModel: BowlingGameViewModel
+    var frameNumber: Int
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("\(frameNumber + 1)")
+            Text(viewModel.getFrameViewScore(frameindex: frameNumber))
+        }
+        .padding()
+        .background(Color.blue.opacity(0.5))
+        .cornerRadius(8)
+        
+    }
+}
