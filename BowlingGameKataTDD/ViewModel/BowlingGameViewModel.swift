@@ -36,7 +36,7 @@ class BowlingGameViewModel: BowlingGameViewModelProtocol, ObservableObject {
 
 extension BowlingGameViewModel {
     
-    func getAllFrames() -> [Frame] {
+    func getAllFrames() -> [any Frame] {
         return model.getAllFrames()
     }
 

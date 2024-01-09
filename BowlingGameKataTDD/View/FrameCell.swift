@@ -15,7 +15,7 @@ class FrameCell: UICollectionViewCell {
     @IBOutlet weak var secondThrowScoreLabel: UILabel!
     @IBOutlet weak var thirdThrowScoreLabel: UILabel!
     
-    func configure(frame: Frame, index: Int) {
+    func configure(frame: any Frame, index: Int) {
         frameNumberLabel.text = "\(index + 1)"
         secondThrowScoreLabel.text = ""
         thirdThrowScoreLabel.isHidden = true

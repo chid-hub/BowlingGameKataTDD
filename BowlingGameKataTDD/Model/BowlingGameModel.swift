@@ -10,7 +10,7 @@ import Foundation
 class BowlingGameModel {
     
     var rolls: [Int] = []
-    var frames: [Frame] = []
+    var frames: [any Frame] = []
     
     func roll(pins: Int) {
         rolls.append(pins)
@@ -56,7 +56,7 @@ class BowlingGameModel {
         updateFrames()
     }
     
-    func getAllFrames() -> [Frame] {
+    func getAllFrames() -> [any Frame] {
         return frames
     }
 }
