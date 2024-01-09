@@ -11,18 +11,25 @@ struct SwiftUIBowlingGameView: View {
     @ObservedObject var viewModel: BowlingGameViewModel
     
     let columns = [
-        GridItem()
+        GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.adaptive(minimum: 150))
     ]
     var body: some View {
        
         VStack {
-            ScrollView(.horizontal) {
-                LazyHGrid(rows: columns, spacing: 10) {
+            Text("Bowling Game").font(.title
+                                      .weight(.bold))
+
+            ScrollView() {
+                LazyVGrid(columns: columns) {
                     ForEach(Array(viewModel.getAllFrames().enumerated()),id: \.element.id) { index,frame in
                         FrameView(viewModel: viewModel, frameNumber: index)
                     }
                 }.padding()
-            }.frame(height:100)
+            }.frame(height:250)
             Text("Total Score: \(viewModel.score())")
             
             VStack{
