@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oQx-Rt-QiD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -11,22 +11,22 @@
         <!--Bowling Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BowlingGameViewController" customModule="BowlingGameKATA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BowlingGameViewController" customModule="BowlingGameKataTDD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-Iw-RCO">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowling Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFh-Rl-km8">
-                                        <rect key="frame" x="20" y="109.33333333333334" width="353" height="36"/>
+                                        <rect key="frame" x="20" y="59.666666666666657" width="353" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yWh-gd-Var">
-                                        <rect key="frame" x="10" y="195.33333333333334" width="373" height="100.00000000000003"/>
+                                        <rect key="frame" x="10" y="145.66666666666666" width="373" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="gXB-gH-ENy"/>
@@ -40,7 +40,7 @@
                                         <cells/>
                                     </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ff-dp-nyO">
-                                        <rect key="frame" x="88" y="295.33333333333331" width="217" height="168.66666666666669"/>
+                                        <rect key="frame" x="88" y="245.66666666666669" width="217" height="223.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iti-g9-wev">
                                                 <rect key="frame" x="59.666666666666657" y="0.0" width="98" height="19.333333333333332"/>
@@ -49,7 +49,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hLy-gM-4Vy">
-                                                <rect key="frame" x="0.0" y="29.333333333333364" width="217" height="84.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="29.333333333333307" width="217" height="84.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click number of pin knocked down" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HHi-Nt-22a" userLabel="LastThrow">
                                                         <rect key="frame" x="0.0" y="0.0" width="217" height="14.333333333333334"/>
@@ -187,7 +187,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S4b-Mn-CQ7">
-                                                <rect key="frame" x="75" y="123.66666666666669" width="67.333333333333314" height="45"/>
+                                                <rect key="frame" x="75" y="123.66666666666663" width="67.333333333333314" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm8-ZC-Uz0">
                                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="45"/>
@@ -198,6 +198,23 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Reset"/>
                                                         <connections>
                                                             <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l9z-MH-DZt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Qzl-nB-6H6">
+                                                <rect key="frame" x="48.666666666666657" y="178.66666666666669" width="120" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY8-lQ-UUc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="mo9-Ef-pdW"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="SwiftUI View"/>
+                                                        <connections>
+                                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1C-IM-VjO"/>
+                                                            <action selector="swiftUIButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9FK-RW-PB8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -227,6 +244,7 @@
                             <constraint firstItem="Kuu-Iw-RCO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LgE-Bs-UeC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="G98-hw-EfM"/>
                     <connections>
                         <outlet property="collectionView" destination="yWh-gd-Var" id="kFM-d5-v6Z"/>
                         <outlet property="scoreLabel" destination="iti-g9-wev" id="hIp-Ok-p58"/>
@@ -234,7 +252,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZTZ-ad-043">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oQx-Rt-QiD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i7b-sg-jey">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lPb-Sk-i7y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pja-xh-QzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
