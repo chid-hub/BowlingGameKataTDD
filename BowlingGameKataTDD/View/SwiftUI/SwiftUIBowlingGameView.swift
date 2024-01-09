@@ -25,6 +25,15 @@ struct SwiftUIBowlingGameView: View {
                     PinButton(viewModel: viewModel, pinNumber: index)
                 }
             }
+            
+            Button(action: {
+                self.viewModel.resetGame()
+            }) {
+                Text("Reset Game")
+            }.padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(8)
         }
     }
 }
