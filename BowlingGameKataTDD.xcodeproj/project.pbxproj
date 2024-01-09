@@ -23,6 +23,7 @@
 		E6A3618C2B483AA100296CBE /* FrameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6A3618A2B483AA100296CBE /* FrameCell.xib */; };
 		E6A3618D2B483AA100296CBE /* FrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3618B2B483AA100296CBE /* FrameCell.swift */; };
 		E6A3618F2B483B3500296CBE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3618E2B483B3500296CBE /* AppConstants.swift */; };
+		E6FAEE582B4C15BB002B820D /* SwiftUIBowlingGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAEE572B4C15BB002B820D /* SwiftUIBowlingGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E6A3618A2B483AA100296CBE /* FrameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameCell.xib; sourceTree = "<group>"; };
 		E6A3618B2B483AA100296CBE /* FrameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCell.swift; sourceTree = "<group>"; };
 		E6A3618E2B483B3500296CBE /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E6FAEE572B4C15BB002B820D /* SwiftUIBowlingGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBowlingGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +100,9 @@
 			children = (
 				E65943562B47F96E00ED90E4 /* App */,
 				E65943342B47F94D00ED90E4 /* Info.plist */,
+				E65943572B47F97800ED90E4 /* View */,
 				E659435A2B47F9C000ED90E4 /* ViewModel */,
 				E65943592B47F9B900ED90E4 /* Model */,
-				E65943572B47F97800ED90E4 /* View */,
 				E65943582B47F98800ED90E4 /* Storyboard */,
 			);
 			path = BowlingGameKataTDD;
@@ -128,6 +130,7 @@
 		E65943572B47F97800ED90E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6FAEE562B4C14C2002B820D /* SwiftUI */,
 				E659432A2B47F94D00ED90E4 /* BowlingGameViewController.swift */,
 				E6A3618B2B483AA100296CBE /* FrameCell.swift */,
 				E6A3618A2B483AA100296CBE /* FrameCell.xib */,
@@ -162,6 +165,14 @@
 				E659435D2B47FD9800ED90E4 /* BowlingGameViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6FAEE562B4C14C2002B820D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E6FAEE572B4C15BB002B820D /* SwiftUIBowlingGameView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				E65943272B47F94D00ED90E4 /* AppDelegate.swift in Sources */,
 				E659435C2B47FD6D00ED90E4 /* BowlingGameModel.swift in Sources */,
 				E65943292B47F94D00ED90E4 /* SceneDelegate.swift in Sources */,
+				E6FAEE582B4C15BB002B820D /* SwiftUIBowlingGameView.swift in Sources */,
 				E65943602B48149600ED90E4 /* OpenFrameModel.swift in Sources */,
 				E65943622B4814E600ED90E4 /* StrikeFrameModel.swift in Sources */,
 				E65943642B481D2300ED90E4 /* SpareFrameModel.swift in Sources */,
