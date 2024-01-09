@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class BowlingGameViewController: UIViewController {
     
@@ -49,6 +50,12 @@ class BowlingGameViewController: UIViewController {
         
         scoreLabel.text = "Total score: \(viewModel.score())"
         collectionView.reloadData()
+    }
+    
+    @IBAction func swiftUIButtonTapped(_ sender: UIButton) {
+        let swiftUIView = SwiftUIBowlingGameView()
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        navigationController?.pushViewController(hostingController, animated: true)
     }
     
 }
