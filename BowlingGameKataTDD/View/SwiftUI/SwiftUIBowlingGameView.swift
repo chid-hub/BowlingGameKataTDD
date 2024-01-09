@@ -21,3 +21,18 @@ struct SwiftUIBowlingGameView_Previews: PreviewProvider {
         SwiftUIBowlingGameView(viewModel: viewModel)
     }
 }
+
+struct PinButton: View {
+    var viewModel: BowlingGameViewModel
+    var pinNumber: Int = 1
+    var body: some View {
+        Button(action: {
+            self.viewModel.roll(pins: pinNumber)
+        }) {
+            Text("\(pinNumber)")
+        }.padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+    }
+}
