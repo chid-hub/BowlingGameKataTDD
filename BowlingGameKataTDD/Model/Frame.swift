@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol Frame {
+protocol Frame: Identifiable, Hashable {
+    var id: UUID { get }
     var rolls: [Int] { get }
     var startingRoll: Int { get }
 

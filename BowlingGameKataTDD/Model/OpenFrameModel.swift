@@ -9,6 +9,8 @@ import Foundation
 
 class OpenFrameModel: Frame {
     
+    var id: UUID = UUID()
+
    let rolls: [Int]
    let startingRoll: Int
 
@@ -34,4 +36,14 @@ class OpenFrameModel: Frame {
        return rolls[index]
    }
 
+}
+
+extension OpenFrameModel {
+    
+    static func == (lhs: OpenFrameModel, rhs: OpenFrameModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

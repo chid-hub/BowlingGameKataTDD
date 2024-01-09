@@ -9,6 +9,8 @@ import Foundation
 
 class SpareFrameModel: Frame {
     
+    var id: UUID = UUID()
+    
     let rolls: [Int]
     let startingRoll: Int
 
@@ -34,4 +36,14 @@ class SpareFrameModel: Frame {
         return rolls[index]
     }
 
+}
+
+extension SpareFrameModel {
+    
+    static func == (lhs: SpareFrameModel, rhs: SpareFrameModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
