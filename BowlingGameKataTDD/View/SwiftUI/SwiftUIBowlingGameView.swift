@@ -9,9 +9,23 @@ import SwiftUI
 
 struct SwiftUIBowlingGameView: View {
     @ObservedObject var viewModel: BowlingGameViewModel
-
+    
     var body: some View {
         Text("Total Score: \(viewModel.score())")
+        
+        VStack{
+            Text("Click number of pin knocked down")
+            HStack(spacing: 10) {
+                ForEach(0...5,id: \.self) { index in
+                    PinButton(viewModel: viewModel, pinNumber: index)
+                }
+            }
+            HStack(spacing: 10) {
+                ForEach(6...10,id: \.self) { index in
+                    PinButton(viewModel: viewModel, pinNumber: index)
+                }
+            }
+        }
     }
 }
 
