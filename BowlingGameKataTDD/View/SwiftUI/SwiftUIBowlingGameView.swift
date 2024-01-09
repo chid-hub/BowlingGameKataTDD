@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct SwiftUIBowlingGameView: View {
-    
+    @ObservedObject var viewModel: BowlingGameViewModel
+
     var body: some View {
-            Text("Hello from SwiftUI!")
+        Text("Total Score: \(viewModel.score())")
     }
 }
 
 struct SwiftUIBowlingGameView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIBowlingGameView()
+        let viewModel = BowlingGameViewModel(bowlingGameModel: BowlingGameModel())
+        SwiftUIBowlingGameView(viewModel: viewModel)
     }
 }

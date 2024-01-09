@@ -53,7 +53,9 @@ class BowlingGameViewController: UIViewController {
     }
     
     @IBAction func swiftUIButtonTapped(_ sender: UIButton) {
-        let swiftUIView = SwiftUIBowlingGameView()
+        
+        let viewModel = BowlingGameViewModel(bowlingGameModel: BowlingGameModel())
+        let swiftUIView = SwiftUIBowlingGameView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: swiftUIView)
         navigationController?.pushViewController(hostingController, animated: true)
     }
