@@ -10,30 +10,43 @@ import SwiftUI
 struct SwiftUIBowlingGameView: View {
     @ObservedObject var viewModel: BowlingGameViewModel
     
+    let columns = [
+        GridItem()
+    ]
     var body: some View {
-        Text("Total Score: \(viewModel.score())")
-        
-        VStack{
-            Text("Click number of pin knocked down")
-            HStack(spacing: 10) {
-                ForEach(0...5,id: \.self) { index in
-                    PinButton(viewModel: viewModel, pinNumber: index)
-                }
-            }
-            HStack(spacing: 10) {
-                ForEach(6...10,id: \.self) { index in
-                    PinButton(viewModel: viewModel, pinNumber: index)
-                }
-            }
+       
+        VStack {
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: columns, spacing: 10) {
+                    ForEach(Array(viewModel.getAllFrames().enumerated()),id: \.element.id) { index,frame in
+                        FrameView(viewModel: viewModel, frameNumber: index)
+                    }
+                }.padding()
+            }.frame(height:100)
+            Text("Total Score: \(viewModel.score())")
             
-            Button(action: {
-                self.viewModel.resetGame()
-            }) {
-                Text("Reset Game")
-            }.padding()
-                .background(Color.orange)
-                .foregroundColor(.white)
-                .cornerRadius(8)
+            VStack{
+                Text("Click number of pin knocked down")
+                HStack(spacing: 10) {
+                    ForEach(0...5,id: \.self) { index in
+                        PinButton(viewModel: viewModel, pinNumber: index)
+                    }
+                }
+                HStack(spacing: 10) {
+                    ForEach(6...10,id: \.self) { index in
+                        PinButton(viewModel: viewModel, pinNumber: index)
+                    }
+                }
+                
+                Button(action: {
+                    self.viewModel.resetGame()
+                }) {
+                    Text("Reset Game")
+                }.padding()
+                    .background(Color.orange)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
         }
     }
 }
